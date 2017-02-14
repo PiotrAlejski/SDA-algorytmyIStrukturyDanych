@@ -22,7 +22,7 @@ public class BubbleSort {
                 for (int j = 0; j < array.length -1 -i ; j++) {
                     counter ++;
                     if(array[j]<array[j+1] ){
-                        swap(array, j, j + 1 );
+                        SortUtils.swap(array, j, j + 1 );
                         flag = false;
                     }
 
@@ -43,7 +43,7 @@ public class BubbleSort {
             for (int j = 0; j < array.length -1 -i ; j++) {
                 counter ++;
                 if(array[j]>array[j+1] ){
-                    swap(array, j, j + 1 );
+                    SortUtils.swap(array, j, j + 1 );
                     flag = false;
                 }
 
@@ -57,12 +57,6 @@ public class BubbleSort {
     }
 
 
-    private void swap(int[] array, int indexl, int index2) {
-        int tmp = array[indexl];
-        array[indexl] = array[index2];
-        array[index2] = tmp;
-
-    }
 
 
 }
