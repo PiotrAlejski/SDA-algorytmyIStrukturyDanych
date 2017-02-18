@@ -1,6 +1,7 @@
 package algorytmy;
 
 import algorytmy.structures.MyList;
+import algorytmy.structures.MyListInterface;
 
 /**
  * Created by RENT on 2017-02-14.
@@ -8,7 +9,7 @@ import algorytmy.structures.MyList;
 public class Application {
     public static void main(String[] args) {
         MyList myList = initMylist();
-        MyList cloneList = myList.clone();
+        MyListInterface cloneList = myList.clone();
         System.out.println(myList.clone());
         cloneList.add(5,16);
         cloneList.put(5,16);
