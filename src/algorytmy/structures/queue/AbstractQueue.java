@@ -34,11 +34,10 @@ public abstract class AbstractQueue implements Queue {
     protected abstract AbstractQueue getInstance(int value);
 
 
-    public int pop() {
+    public int pop() throws QueueException {
         AbstractQueue nextValue = this.next;
         if (nextValue == null) {
-            System.out.println("This queue is already empty");
-            return 0;
+            throw new QueueException("This queue is already empty");
         }
         this.next = nextValue.next;
         nextValue.next = null;
